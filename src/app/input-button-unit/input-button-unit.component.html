@@ -2,3 +2,8 @@
   input-button-init works!
   The title is: {{ title }}
 </p>
+
+<input [value]="title" (keyup.enter)="changeTitle($event.target.value)">
+<button (click)="changeTitle('button Clicked!')">
+  Save
+</button>

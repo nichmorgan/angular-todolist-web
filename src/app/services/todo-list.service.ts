@@ -31,7 +31,7 @@ export class TodoListService {
   updateItem(item: TodoItem, changes) {
     const index = this.todoList.indexOf(item);
     this.todoList[index] = { ...item, ...changes };
-    this.storageService.setData(todoListStorageKey, this.todoList);
+    this.saveList();
   }
 
   saveList() {
